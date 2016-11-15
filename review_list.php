@@ -7,10 +7,10 @@ close_connection();
 echo "系统所有评论信息如下：<br/>";
 while ($row=mysql_fetch_array($result_set)) {
 	echo "评论内容：".$row["content"]."<br/>";
-	echo "日期：".$row["public_time"]." ";
+	echo "日期：".$row["publish_time"]." ";
 	echo "IP地址：".$row["ip"]." ";
 	echo "状态：".$row["state"]."<br/>";
-	echo "<a href='review_delete.php?review_id=".$row["review_id"]"'>删除</a>";
+	echo "<a href='review_delete.php?review_id=".$row['review_id']."'>删除</a>";
 	echo " ";
 	if ($row["state"]=="未审核") {
 		echo "<a href='review_verify.php?review_id=".$row["review_id"]."'>审核</a>";
