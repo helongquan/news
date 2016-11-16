@@ -8,7 +8,7 @@ else{
 	$category_id=$_POST["category_id"];
 	$title=$_POST["title"];
 	$content=$_POST["content"];
-	$currentDate=date("Y-m-d H:i:s");
+	$currentDate= date("Y-m-d H:i:s");
 	$clicked=0;
 	$file_name=$_FILES["news_file"]["name"];
 	$message=upload($_FILES["news_file"],"uploads");

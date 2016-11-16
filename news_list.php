@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once("functions/database.php");
 if (isset($_GET["message"])) {
 	echo $_GET["message"]."<br/>";
@@ -17,9 +17,11 @@ if (isset($_GET["keyword"])) {
 请输入关键词：<input type="text" name="keyword" value="<?php echo $keyword?>">
 	<input type="submit" name="" value="搜索">
 </form>
+<a href="news_add.php"><button>添加新闻</button></a>
+<br/>
 <br/>
 <table>
-	<?php 
+	<?php
 		get_connection();
 		$result_set=mysql_query($search_sql);
 		close_connection();

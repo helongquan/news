@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once("functions/database.php");
 $sql="select publish_time from news";
 get_connection();

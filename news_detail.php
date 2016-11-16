@@ -38,32 +38,35 @@ mysql_free_result($result_review);
  ?>
 <table>
 	<tr>
-		<td width="80">标题：</td>
+		<td width="150">标题：</td>
 		<td><?php echo $news['title']; ?></td>
 	</tr>
 	<tr>
-		<td width="80">内容：</td>
+		<td width="150">内容：</td>
 		<td><?php echo $news['content']; ?></td>
 	</tr>
 	<tr>
-		<td width="80">附件：</td>
+		<td width="150">附件：</td>
 		<td><a href="download.php?attachment=<?php echo $news['attachment'];?>"><?php echo $news['attachment'];?></a></td>
 	</tr>
 	<tr>
-		<td width="80">发布者：</td>
+		<td width="150">发布者：</td>
 		<td><?php echo $user['name']; ?></td>
 	</tr>
 	<tr>
-		<td width="80">类别：</td>
+		<td width="150">类别：</td>
 		<td><?php echo $category['name']; ?></td>
 	</tr>
 	<tr>
-		<td width="80">发布时间：</td>
+		<td width="150">发布时间：</td>
 		<td><?php echo $news['publish_time']; ?></td>
 	</tr>
 	<tr>
-		<td width="80">点击次数：</td>
+		<td width="150">点击次数：</td>
 		<td><?php echo $news['clicked']; ?></td>
+	</tr>
+	<tr>
+		<td><a href="index.php"><button>首页</button></a></td>
 	</tr>
 </table>
 <?php
@@ -76,7 +79,7 @@ if ($count_review>0) {
  ?>
 <br/>
 <form action="review_save.php" method="post">
-	添加评论：<textarea name="content" cols="50" rows="50"></textarea><br/>
+	添加评论：<textarea name="content" cols="50" rows="5"></textarea><br/>
 	<input type="hidden" name="news_id" value="<?php echo $news['news_id'];?>">
 	<input type="submit" name="评论">
 </form>

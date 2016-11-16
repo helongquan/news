@@ -1,4 +1,5 @@
 <?php
+header("Content-type: text/html; charset=utf-8");
 $database_connection=null;
 function get_connection(){
 $hostname="localhost";//数据库服务器主机名，可以用IP代替
