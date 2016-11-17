@@ -7,5 +7,7 @@ close_connection();
 echo "系统所有评论信息如下：<br/>";
 while ($row=mysql_fetch_array($result_set)) {
 	echo "日期：".$row["publish_time"]." ";
+
+	echo strtotime($row['publish_time']);
 }
  ?>

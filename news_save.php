@@ -9,6 +9,7 @@ else{
 	$title=$_POST["title"];
 	$content=$_POST["content"];
 	$currentDate= date("Y-m-d H:i:s");
+	$currentDate_2=strtotime("2009-10-21 16:00:10");
 	$clicked=0;
 	$file_name=$_FILES["news_file"]["name"];
 	$message=upload($_FILES["news_file"],"uploads");
