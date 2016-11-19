@@ -1,6 +1,6 @@
 <?php
 include_once("functions/database.php");
-$news_id=$_GET["rnews_id"];
+$news_id=$_GET["news_id"];
 $sql="select * from review where news_id=$news_id and state='已审核' order by review_id desc";
 get_connection();
 $result_set=mysql_query($sql);

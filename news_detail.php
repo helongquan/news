@@ -1,3 +1,6 @@
+<?php 
+include_once("inc/header.php");
+ ?>
 <?php
 include_once("functions/database.php");
 $news_id=$_GET["news_id"];
@@ -36,10 +39,11 @@ mysql_free_result($result_news);
 mysql_free_result($result_review);
 // 显示新闻详细信息
  ?>
+<div id="news_details">
 <table>
 	<tr>
 		<td width="150">标题：</td>
-		<td><?php echo $news['title']; ?></td>
+		<td class="news_details_title"><?php echo $news['title']; ?></td>
 	</tr>
 	<tr>
 		<td width="150">内容：</td>
@@ -47,7 +51,7 @@ mysql_free_result($result_review);
 	</tr>
 	<tr>
 		<td width="150">附件：</td>
-		<td><a href="download.php?attachment=<?php echo $news['attachment'];?>"><?php echo $news['attachment'];?></a></td>
+		<td><img src="uploads/<?php echo $news['attachment']?>"></td>
 	</tr>
 	<tr>
 		<td width="150">发布者：</td>
@@ -65,10 +69,8 @@ mysql_free_result($result_review);
 		<td width="150">点击次数：</td>
 		<td><?php echo $news['clicked']; ?></td>
 	</tr>
-	<tr>
-		<td><a href="index.php"><button>首页</button></a></td>
-	</tr>
 </table>
+</div>
 <?php
 // 显示查看评论超链接
 if ($count_review>0) {
@@ -79,7 +81,7 @@ if ($count_review>0) {
  ?>
 <br/>
 <form action="review_save.php" method="post">
-	添加评论：<textarea name="content" cols="50" rows="5"></textarea><br/>
+	添加评论：<br/><textarea name="content" cols="50" rows="5"></textarea><br/>
 	<input type="hidden" name="news_id" value="<?php echo $news['news_id'];?>">
 	<input type="submit" name="评论">
 </form>

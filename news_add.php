@@ -1,3 +1,6 @@
+<?php
+	include_once("inc/header.php")
+ ?>
 <form method="post" action="news_save.php" enctype="multipart/form-data">
 	标题：<input type="text" name="title" size="60"><br/>
 	内容：<textarea cols="60" rows="16" name="content"></textarea><br/>
@@ -20,3 +23,6 @@
 		  <input type="submit" value="提交">
 		  <input type="reset" value="清空">
 </form>
+<?php 
+
+ ?>

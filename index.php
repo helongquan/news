@@ -1,5 +1,5 @@
 <?php
-	echo "<h2>这是首页</h2><br/>";
+	include_once("inc/header.php")
  ?>
  <?php
 include_once("functions/database.php");
@@ -16,16 +16,21 @@ if (isset($_GET["keyword"])) {
 	$search_sql="select * from news where title like '%$keyword%' or content like '%$keyword%' order by news_id desc";
 }
 ?>
-<table>
-	<tr>
-		<td><a href="news_add.php">添加新闻</a></td>
-		<td><a href="add_category.php">添加分类</a></td>
-		<td><a href="review_list.php">查看评论</a></td>
-		<td><a href="news_list.php">查看新闻</a></td>
-	</tr>
-</table>
-<br/>
-<form method="get" action="news_list.php">
-请输入关键词：<input type="text" name="keyword" value="<?php echo $keyword;?>">
-	<input type="submit" name="" value="搜索">
-</form>
+<?php
+include_once("inc/siderbar.php");
+ ?>
+<div id="news_list">
+	<form method="get" action="news_list.php">
+	请输入关键词：<input type="text" name="keyword" value="<?php echo $keyword;?>">
+		<input type="submit" name="" value="搜索">
+	</form>
+	<br/>
+	<table>
+		<tr>
+			<td><a href="news_add.php" class="btn btn-success">添加新闻</a></td>
+			<td><a href="add_category.php" class="btn btn-primary">添加分类</a></td>
+			<td><a href="review_list.php" class="btn btn-warning">查看评论</a></td>
+			<td><a href="news_list.php" class="btn btn-info">查看新闻</a></td>
+		</tr>
+	</table>
+</div>
