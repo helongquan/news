@@ -1,18 +1,7 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
 include_once("inc/header.php");
- ?>
-
-<div class="container">
-	<div class="form-group">
-		<h2 class="page_title">新闻分类添加页面</h2>
-		<form method="post" action="category_list.php">
-			<label>添加新闻分类</label>
-			<input type="text" class="form-control" name="name" required="required">
-			<input type="submit" class="btn btn-default" name="submit" value="添加">
-		</form>
-	</div>
-</div>
+?>
 
 <div id="category_list">
 	<div class="container">
@@ -27,7 +16,7 @@ include_once("inc/header.php");
 				}
 				while ($row=mysql_fetch_array($result_set_12)) {
 			 ?>
-			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><a href="category_detail.php?category_id=<?php echo $row['category_id']?>"><?php echo $row['name']?></a></div>
+			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><span class="left"><a href="category_detail.php?category_id=<?php echo $row['category_id']?>"><?php echo $row['name']?></a></span><span class="right"><a href="category_delete.php?category_id=<?php echo $row['category_id']?>"><i class="glyphicon glyphicon-trash"></i></a></span></div>
 			<?php
 			}
 			?>
@@ -35,6 +24,8 @@ include_once("inc/header.php");
 	</div>
 </div>
 
+
 <?php
+// header("Location:add_category.php");
 include_once("inc/footer.php");
  ?>

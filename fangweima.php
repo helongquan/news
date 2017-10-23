@@ -13,7 +13,7 @@ if (!is_login()) {
 		<div class="form-group">
 			<h2 class="page_title">防伪码添加页面，请输入防伪码</h2>
 			<label>添加防伪码</label>
-			<input type="text" class="form-control" name="code" value="<?php echo $code?>" placeholder="输入要添加的防伪码">
+			<input type="text" class="form-control" name="code" value="<?php echo $code?>" placeholder="输入要添加的防伪码" required="required">
 		</div>
 		<input type="submit" name="" class="btn btn-primary" value="添加"/>
 	</form>
@@ -47,7 +47,7 @@ if (!is_login()) {
 		<div class="form-group">
 			<h2 class="page_title">防伪码查询</h2>
 			<label>输入防伪码</label>
-			<input type="text" class="form-control" name="code" value="<?php echo $code?>" placeholder="输入要查询的防伪码">
+			<input type="text" class="form-control" name="code" value="<?php echo $code?>" placeholder="输入要查询的防伪码" required="required">
 		</div>
 		<input type="submit" name="" class="btn btn-primary" value="查询防伪码"/>
 	</form>

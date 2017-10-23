@@ -30,7 +30,7 @@ include_once("inc/siderbar.php");
 		<div class="content">
 			<a href="news_add.php" class="btn btn-success">添加新闻</a>
 			<a href="add_category.php" class="btn btn-primary">添加分类</a>
-			<a href="category_list.php" class="btn btn-info">分类中心</a>
+			<a href="category_center.php" class="btn btn-info">分类中心</a>
 			<a href="review_list.php" class="btn btn-warning">查看评论</a>
 			<a href="news_list.php" class="btn btn-info">查看新闻</a>
 			<a href="fangweima.php" class="btn btn-info">添加防伪码</a>
