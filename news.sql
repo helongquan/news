@@ -14,7 +14,7 @@ create database news;
 use news;
 create table category(
 category_id int auto_increment primary key,
-name char(20) not NULL
+name char(20) NOT NULL unique
 );
 create table users(
 user_id int auto_increment primary key,
@@ -42,4 +42,9 @@ publish_time datetime,
 state char(10),
 ip char(15),
 constraint FK_review_news foreign key (news_id) references news(news_id)
+);
+DROP TABLE IF EXISTS `fangweima`;
+CREATE TABLE fangweima (
+  fangweima_id int(11) NOT NULL AUTO_INCREMENT,
+  code varchar(32) NOT NULL unique
 );

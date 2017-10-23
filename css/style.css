@@ -7,17 +7,30 @@ p,span,a{
 	font-size: 1.6rem;
 	line-height: 1.8rem;
 }
-h2,h3,h4,h5{
-	font-size: 24px;
-	margin: 0px 0px;
-	background: #2E2A2A;
-	color: #fff;
-	padding: 10px 10px;
+h2, h3, h4, h5 {
+    font-size: 18px;
+    margin: 0px 0px;
+    background: #ecab71;
+    color: #fff;
+    padding: 10px 10px;
+}
+ul,li{
+	padding:0px;
+	margin:0px;
 }
 #header{
 	margin-bottom: 10px;
-	background: #A19F9F;
+	background: #9dcbf1;
 	padding: 10px;
+}
+table{
+	width: 100% !important;
+}
+td{
+	padding:10px 0px;
+}
+#news_details table tr td:first-child{
+	width: 100px !important;
 }
 #mainmenu ul{
 	list-style: none;
@@ -31,7 +44,7 @@ h2,h3,h4,h5{
 	width: 300px;
 	float: left;
 	margin: 10px;
-	background: #929395;
+	background: rgb(219, 233, 245);
 	clear: left;
 }
 #siderbar ul{
@@ -45,6 +58,12 @@ h2,h3,h4,h5{
 	white-space:nowrap;
 	overflow:hidden;
 	text-overflow:ellipsis;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #ccc !important;
 }
 #news_list{
 	margin: 10px 0px;
@@ -74,4 +93,86 @@ height:200px;
 .pinglun{
 	padding: 10px;
 	margin: 10px;
+}
+.clear{
+	clear: both !important;
+}
+#footer{
+	background: rgba(183, 212, 236, 0.5);
+    margin-top: 20px;
+    padding: 20px;
+}
+#footer ul{
+	list-style-type: none;
+}
+#footer ul li{
+	color: #fff !important;
+}
+
+.ssd{
+	margin: 10px;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+}
+.page_title{
+	display: block;
+	margin-bottom: 15px;
+}
+.category_list .col-xs-6 a{
+	background: #a4daf3;
+    padding: 10px;
+    display: block;
+    margin: 5px;
+}
+.category_list div{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+.container {
+    margin: 15px auto !important;
+}
+.fangweima_list div[class^="col-"]{
+    background: rgba(156, 202, 241, 0.99);
+    color: #fff;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    padding: 10px;
+}
+.review_title h2{
+	display: block;
+	font-size: 18px;
+	font-weight: 500;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-bottom: 1px solid #ccc !important;
+	padding-bottom: 10px;
+}
+.content table{
+	width: 70% !important;
+}
+.content table tr{
+	border-bottom: 1px solid #888 !important;
+}
+.review_list{
+	border-bottom: 1px solid;
+	padding-bottom: 10px;
+	margin: 10px auto;
+}
+.btn{
+	margin: 5px auto;
+}
+textarea{
+	width: 100% !important;
+}
+@media (max-width:760px){
+	#siderbar {
+    float: none !important;
+    margin: 10px auto;
+    background: #929395;
+    clear: left;
+    width: 100%;
+}
+.content table{
+	width: 100% !important;
+}
 }

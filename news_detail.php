@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once("inc/header.php");
  ?>
 <?php
@@ -40,48 +40,55 @@ mysql_free_result($result_review);
 // 显示新闻详细信息
  ?>
 <div id="news_details">
-<table>
-	<tr>
-		<td width="150">标题：</td>
-		<td class="news_details_title"><?php echo $news['title']; ?></td>
-	</tr>
-	<tr>
-		<td width="150">内容：</td>
-		<td><?php echo $news['content']; ?></td>
-	</tr>
-	<tr>
-		<td width="150">附件：</td>
-		<td><img src="uploads/<?php echo $news['attachment']?>"></td>
-	</tr>
-	<tr>
-		<td width="150">发布者：</td>
-		<td><?php echo $user['name']; ?></td>
-	</tr>
-	<tr>
-		<td width="150">类别：</td>
-		<td><?php echo $category['name']; ?></td>
-	</tr>
-	<tr>
-		<td width="150">发布时间：</td>
-		<td><?php echo $news['publish_time']; ?></td>
-	</tr>
-	<tr>
-		<td width="150">点击次数：</td>
-		<td><?php echo $news['clicked']; ?></td>
-	</tr>
-</table>
+	<table>
+		<tr>
+			<td>标题：</td>
+			<td class="news_details_title"><?php echo $news['title']; ?></td>
+		</tr>
+		<tr>
+			<td>内容：</td>
+			<td>
+			<img src="uploads/<?php echo $news['attachment']?>">
+			<?php echo $news['content']; ?>
+			</td>
+		</tr>
+		<tr>
+			<td>附件：</td>
+			<td><img src="uploads/<?php echo $news['attachment']?>"></td>
+		</tr>
+		<tr>
+			<td>发布者：</td>
+			<td><?php echo $user['name']; ?></td>
+		</tr>
+		<tr>
+			<td>类别：</td>
+			<td><?php echo $category['name']; ?></td>
+		</tr>
+		<tr>
+			<td>发布时间：</td>
+			<td><?php echo $news['publish_time']; ?></td>
+		</tr>
+		<tr>
+			<td>点击次数：</td>
+			<td><?php echo $news['clicked']; ?></td>
+		</tr>
+	</table>
+
+	<?php
+	// 显示查看评论超链接
+	if ($count_review>0) {
+		echo "<a href='review_news_list.php?news_id=".$news['news_id']."'>共有".$count_review."条评论</a><br/>";
+	}else{
+		echo "<div class='container'><div class='ssd'>该新闻暂无评论！</div></div><br/>";
+	}
+	 ?>
+	<br/>
+	<form action="review_save.php" method="post">
+		添加评论：<br/><textarea name="content" rows="5"></textarea><br/>
+		<input type="hidden" name="news_id" value="<?php echo $news['news_id'];?>">
+		<input type="submit" name="评论">
+	</form>
 </div>
 <?php
-// 显示查看评论超链接
-if ($count_review>0) {
-	echo "<a href='review_news_list.php?news_id=".$news['news_id']."'>共有".$count_review."条评论</a><br/>";
-}else{
-	echo "该新闻暂无评论！<br/>";
-}
+	include_once("inc/footer.php");
  ?>
-<br/>
-<form action="review_save.php" method="post">
-	添加评论：<br/><textarea name="content" cols="50" rows="5"></textarea><br/>
-	<input type="hidden" name="news_id" value="<?php echo $news['news_id'];?>">
-	<input type="submit" name="评论">
-</form>

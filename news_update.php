@@ -11,3 +11,7 @@ close_connection();
 $message="新闻信息修改成功";
 header("Location:news_list.php?message=$message");
  ?>
+
+ <?php
+include_once("inc/footer.php");
+ ?>

@@ -1,5 +1,5 @@
 <?php
-	include_once("inc/header.php")
+	include_once("inc/header.php");
  ?>
 <?php
 include_once("functions/file_system.php");
@@ -23,6 +23,10 @@ else{
 		mysql_query($sql);
 		close_connection();
 	}
-}
-header("Location:news_list.php?message=$message");
+};
+header("location:news_list.php");
+ ?>
+
+<?php
+	include_once("inc/footer.php");
  ?>
