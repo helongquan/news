@@ -8,11 +8,13 @@ $news_id=$_GET["news_id"];
 $sql_news_update="update news set clicked=clicked+1 where news_id=$news_id";
 $sql_news_detail="select * from news where news_id=$news_id";
 $sql_review_query="select * from review where news_id=$news_id and state='已审核'";
+$sqls="select * from review left join news on review.news_id=news.news_id join users on users.user_id=news.user_id order by review_id desc";
 // 执行3条SQL语句
 get_connection();
 mysql_query($sql_news_update);
 $result_news=mysql_query($sql_news_detail);
 $result_review=mysql_query($sql_review_query);
+$review_all_list=mysql_query($sqls);
 // 取出结果集中新闻条数
 $count_news=mysql_numrows($result_news);
 // 取出结果集中的该新闻“已审核”的评论条数
@@ -78,6 +80,21 @@ mysql_free_result($result_review);
 	// 显示查看评论超链接
 	if ($count_review>0) {
 		echo "<a href='review_news_list.php?news_id=".$news['news_id']."'>共有".$count_review."条评论</a><br/>";
+		echo "<div class='review_title'><h2>网友评论：</h2></div>";
+				while ($row=mysql_fetch_array($review_all_list)) {
+					echo "<div class='pinglun'>".$row['name']."说：<br/>";
+					echo "<div class='review_content'>".$row['review_content']."</div>";
+					echo "日期：".$row["publish_time"]." ";
+					echo "IP地址：".$row["ip"]." ";
+					echo "状态：".$row["state"]."<br/>";
+					echo "<a href='review_delete.php?review_id=".$row['review_id']."'>删除</a>";
+					echo " ";
+					if ($row["state"]=="未审核") {
+						echo "<a href='review_verify.php?review_id=".$row["review_id"]."'>审核</a>";
+					}
+					echo "<hr/></div>";
+				}
+				echo $row;
 	}else{
 		echo "<div class='container'><div class='ssd'>该新闻暂无评论！</div></div><br/>";
 	}

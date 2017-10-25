@@ -3,7 +3,7 @@
 	<ul>
 		<?php
 			get_connection();
-			$result_set_11=mysql_query($search_sql);
+			$result_set_11=mysql_query($search_sql_limit_5);
 			close_connection();
 			if (mysql_num_rows($result_set_11)==0) {
 				exit("暂无记录！");

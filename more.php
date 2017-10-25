@@ -54,7 +54,7 @@ include_once("inc/siderbar.php");
 							// 构造模糊查询新闻的SQL语句
 							$result_sql="select * from news where title like '%keyword%' or content like '%keyword%' order by news_id desc limit $start,$page_size";
 						}
-					$result_set=mysql_query($search_sql_limit_8);
+					$result_set=mysql_query($search_sql_all_news);
 					close_connection();
 					if (mysql_num_rows($result_set)==0) {
 						exit("暂无记录！");
@@ -78,7 +78,6 @@ include_once("inc/siderbar.php");
 				<?php
 			}
 				 ?>
-			<a href="more.php" class="more">阅读更多》》</a>
 			</table>
 		</div>
 	</div>

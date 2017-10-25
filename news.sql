@@ -19,7 +19,8 @@ name char(20) NOT NULL unique
 create table users(
 user_id int auto_increment primary key,
 name char(20) not NULL,
-password char(32)
+password char(32) NOT NULL,
+email varchar(50) NOT NULL unique
 );
 create table news(
 news_id int auto_increment primary key,

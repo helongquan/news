@@ -37,7 +37,7 @@ include_once("inc/header.php");
 					// 构造模糊查询新闻的SQL语句
 					$result_sql="select * from news where title like '%keyword%' or content like '%keyword%' order by news_id desc limit $start,$page_size";
 				}
-			$result_set=mysql_query($search_sql);
+			$result_set=mysql_query($search_sql_all_news);
 			close_connection();
 			if (mysql_num_rows($result_set)==0) {
 				exit("暂无记录！");

@@ -24,6 +24,7 @@ else{
 		close_connection();
 	}
 };
+echo "<script>alert('新闻发布成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 header("location:news_list.php");
  ?>
 

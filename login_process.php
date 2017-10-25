@@ -31,7 +31,3 @@ header("Location:login.php?login_message=password_right");
 }
 close_connection();
  ?>
-);
-}
-close_connection();
- ?>
