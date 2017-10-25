@@ -3,8 +3,21 @@
 include_once("inc/header.php");
 ?>
 
+<!--通过javascript验证手机号 开始-->
+<script type="text/javascript">
+function checkMobile(){
+    var sMobile = document.mobileform.shouji.value;
+    if(!(/^1[3|5][0-9]\d{4,8}$/.test(sMobile))){
+        alert("不是完整的11位手机号或者正确的手机号前七位");
+        document.mobileform.shouji.focus();
+        return false;
+    }
+}
+</script>
+<!--通过javascript验证手机号 结束-->
+
 <div class="container">
-	<form method="post" action="contact_form.php">
+	<form method="post" name="mobileform" action="contact_form.php" onSubmit="return checkMobile();">
 	  <div class="form-group">
 	    <label for="exampleInputEmail1">姓名：</label>
 	    <input type="text" class="form-control" name="name" value="<?php echo $name?>" placeholder="姓名" required>
@@ -27,7 +40,6 @@ include_once("inc/header.php");
 	  <input type="submit" name="" class="btn btn-default" value="发送"/>
 	</form>
 </div>
-
 
 
 
