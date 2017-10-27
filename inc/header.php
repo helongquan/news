@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
@@ -46,14 +47,16 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
 	      	<li><a href="index.php">首頁</a></li>
-	        <li><a href="#">關於我們</a></li>
+	        <li><a href="about.php">關於我們</a></li>
+			<li><a href="fangweima.php">防伪码</a></li>
+			<li><a href="shopping.php">商城中心</a></li>
+			<li><a href="contact.php">联系我们</a></li>
 	        <li><a href="login.php">登录</a></li>
 			<li><a href="register.php">注册</a></li>
 			<li><a href="logout.php">退出</a></li>
-			<li><a href="fangweima.php">防伪码</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="contact.php">联系我们</a></li>
+	        <li><a href="user.php"><i class="glyphicon glyphicon-user"></i></a></li>
 	      </ul>
 	    </div>
 	  </div>

@@ -3,7 +3,7 @@
 include_once("inc/header.php");
 ?>
 
-<!--通过javascript验证手机号 开始-->
+<!--通过javascript验证手机号 -->
 <script type="text/javascript">
 function checkMobile(){
     var sMobile = document.mobileform.shouji.value;
@@ -14,7 +14,6 @@ function checkMobile(){
     }
 }
 </script>
-<!--通过javascript验证手机号 结束-->
 
 <div class="container">
 	<form method="post" name="mobileform" action="contact_form.php" onSubmit="return checkMobile();">
@@ -28,7 +27,7 @@ function checkMobile(){
 	  </div>
 	  <div class="form-group">
 	    <label for="exampleInputPassword1">留言内容：</label>
-	    <textarea class="form-control" type="text" name="liuyan" rows="3" value="<?php echo $liuyan?>" placeholder="留言内容"></textarea>
+	    <textarea class="form-control" type="text" name="liuyan" rows="5" value="<?php echo $liuyan?>" placeholder="留言内容"></textarea>
 	  </div>
 	  <div class="form-group">
 	    <p>验证码图片：

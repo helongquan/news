@@ -1,5 +1,7 @@
 <?php
 include_once("inc/header.php");
+include_once("functions/page.php");    //新添加的，为了实现分页
+
  ?>
 <div id="news_list">
 	<form method="get" action="news_list.php">
@@ -34,10 +36,13 @@ include_once("inc/header.php");
 				$result_sql="select * from news order by news_id desc limit $start,$page_size";
 				if (isset($_GET["keyword"])) {
 					$keyword=$_GET["keyword"];
-					// 构造模糊查询新闻的SQL语句
 					$result_sql="select * from news where title like '%keyword%' or content like '%keyword%' order by news_id desc limit $start,$page_size";
-				}
+			}
 			$result_set=mysql_query($search_sql_all_news);
+
+			// $result_news=mysql_query($search_sql_all_news);
+			// $total_records=mysql_num_rows($result_news);
+			// $page_size=3;
 			close_connection();
 			if (mysql_num_rows($result_set)==0) {
 				exit("暂无记录！");
@@ -62,6 +67,10 @@ include_once("inc/header.php");
 	}
 		 ?>
 	</table>
+	<?php 
+		$url=$_SERVER["PHP_SELF"];
+		page($total_records,$page_size,$page_current,$url,$keyword);
+	 ?>
 </div>
 
 <?php

@@ -96,7 +96,7 @@ mysql_free_result($result_review);
 				}
 				echo $row;
 	}else{
-		echo "<div class='container'><div class='ssd'>该新闻暂无评论！</div></div><br/>";
+		echo "<div class='ssd'>该新闻暂无评论！</div><br/>";
 	}
 	 ?>
 	<br/>

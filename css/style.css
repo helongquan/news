@@ -185,3 +185,13 @@ textarea{
 	width: 100% !important;
 }
 }
+
+.jumbotron {
+    padding: 15px !important;
+}
+.shop img{
+	width: 100% !important;
+}
+.shop div[class^="col-"]{
+	margin:15px auto;
+}

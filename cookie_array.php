@@ -5,3 +5,5 @@ setcookie("name[one]","name one");
 setcookie("name[two]","name two");
 header("Location:cookie_list.php");
  ?>
+
+ ?>
