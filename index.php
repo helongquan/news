@@ -25,17 +25,25 @@ include_once("inc/siderbar.php");
 	<div id="news_list">
 		<div class="content">
 			<form method="get" action="news_list.php">
-			请输入关键词：<input type="text" name="keyword" value="<?php echo $keyword;?>">
-				<input type="submit" name="" value="搜索">
+				  <div class="col-lg-7 nopadding">
+				    <div class="input-group">
+				      <input type="text" class="form-control" name="keyword" placeholder="请输入关键词" value="<?php echo $keyword;?>">
+				      <span class="input-group-btn">
+				        <button class="btn btn-primary"  type="submit">搜索</button>
+				      </span>
+				    </div>
+				  </div>
 			</form>
-			<br/>
+
 			<div class="content">
-				<a href="news_add.php" class="btn btn-success">添加新闻</a>
-				<a href="add_category.php" class="btn btn-primary">添加分类</a>
-				<a href="category_center.php" class="btn btn-info">分类中心</a>
-				<a href="review_list.php" class="btn btn-warning">查看评论</a>
-				<a href="news_list.php" class="btn btn-info">查看新闻</a>
-				<a href="fangweima.php" class="btn btn-info">添加防伪码</a>
+				<div class="add_list">
+					<a href="news_add.php" class="btn btn-success"><i class="glyphicon glyphicon-paperclip"></i> 添加新闻</a>
+					<a href="add_category.php" class="btn btn-primary"><i class="glyphicon glyphicon-th-list"></i> 添加分类</a>
+					<a href="category_center.php" class="btn btn-info"><i class="glyphicon glyphicon-th"></i> 分类中心</a>
+					<a href="review_list.php" class="btn btn-warning"><i class="glyphicon glyphicon-sunglasses"></i> 查看评论</a>
+					<a href="news_list.php" class="btn btn-info"><i class="glyphicon glyphicon-sunglasses"></i> 查看新闻</a>
+					<a href="fangweima.php" class="btn btn-info"><i class="glyphicon glyphicon-barcode"></i> 添加防伪码</a>
+				</div>
 			</div>
 			<hr>
 			<table>
@@ -78,7 +86,7 @@ include_once("inc/siderbar.php");
 				<?php
 			}
 				 ?>
-			<a href="more.php" class="more">阅读更多》》</a>
+			<a href="more.php" class="more">阅读更多</a>
 			</table>
 		</div>
 	</div>

@@ -25,6 +25,7 @@ $admin=mysql_fetch_array($result_set);
 $_SESSION['user_id']=$admin['user_id'];
 $_SESSION['name']=$admin['name'];
 
+echo "<script>alert('登录成功');location.href='index.php';</script>";
 header("Location:login.php?login_message=password_right");
 }else{
 	header("Location:login.php?login_message=password_error");

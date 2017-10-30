@@ -1,19 +1,22 @@
 <?php
 include_once("inc/header.php");
-include_once("functions/page.php");    //新添加的，为了实现分页
+// include_once("functions/page.php");
 
  ?>
 <div id="news_list">
+
 	<form method="get" action="news_list.php">
-	  <div class="form-group">
-	    <label class="sr-only" for="exampleInputAmount">请输入关键词</label>
-	    <div class="input-group">
-	      <div class="input-group-addon">请输入关键词</div>
-	      <input type="text" class="form-control" id="exampleInputAmount" name="keyword" value="<?php echo $keyword?>" placeholder="输入关键词">
-	    </div>
-	  </div>
-	  <button type="submit" class="btn btn-primary">搜索</button>
+		  <div class="col-lg-7 nopadding">
+		    <div class="input-group">
+		      <input type="text" class="form-control" name="keyword" placeholder="请输入关键词" value="<?php echo $keyword;?>">
+		      <span class="input-group-btn">
+		        <button class="btn btn-primary"  type="submit">搜索</button>
+		      </span>
+		    </div>
+		  </div>
 	</form>
+
+
 	<br/>
 	<br/>
 	<a href="news_add.php" class="btn btn-primary">添加新闻</a>
@@ -67,10 +70,7 @@ include_once("functions/page.php");    //新添加的，为了实现分页
 	}
 		 ?>
 	</table>
-	<?php 
-		$url=$_SERVER["PHP_SELF"];
-		page($total_records,$page_size,$page_current,$url,$keyword);
-	 ?>
+
 </div>
 
 <?php

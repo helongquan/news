@@ -3,7 +3,11 @@
 	include_once("functions/is_login.php");
 	session_start();
 	if (!is_login()) {
-		echo "请你登录系统后，再访问该页面！";
+		echo "<div class='container'>";
+		echo "请你登录系统后，再访问该页面！<br/>";
+		echo "<a href='login.php' class='btn btn-primary'>登录</a>";
+		echo "</div>";
+		include_once("inc/footer.php");
 		return;
 	}
  ?>

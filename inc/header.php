@@ -41,19 +41,19 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a href="index.php"><img src="images/logo.png"></a>
+	      <a href="index.php" class="logo"><img src="images/logo.png"></a>
 	    </div>
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	      	<li><a href="index.php">首頁</a></li>
-	        <li><a href="about.php">關於我們</a></li>
-			<li><a href="fangweima.php">防伪码</a></li>
-			<li><a href="shopping.php">商城中心</a></li>
-			<li><a href="contact.php">联系我们</a></li>
-	        <li><a href="login.php">登录</a></li>
-			<li><a href="register.php">注册</a></li>
-			<li><a href="logout.php">退出</a></li>
+	      	<li><a href="index.php"><i class="glyphicon glyphicon-home"></i> 首頁</a></li>
+	        <li><a href="about.php"><i class="glyphicon glyphicon-book"></i> 關於我們</a></li>
+			<li><a href="fangweima.php"><i class="glyphicon glyphicon-barcode"></i> 防伪码</a></li>
+			<li><a href="shopping.php"><i class="glyphicon glyphicon-shopping-cart"></i> 商城中心</a></li>
+			<li><a href="contact.php"><i class="glyphicon glyphicon-earphone"></i> 联系我们</a></li>
+	        <li><a href="login.php"><i class="glyphicon glyphicon-user"></i> 登录</a></li>
+			<li><a href="register.php"><i class="glyphicon glyphicon-list-alt"></i> 注册</a></li>
+			<li><a href="logout.php"><i class="glyphicon glyphicon-hourglass"></i> 退出</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="user.php"><i class="glyphicon glyphicon-user"></i></a></li>
@@ -71,6 +71,7 @@ if (isset($_GET["message"])) {
 }
 // 限制查询的条数
 $search_sql_limit_5="select * from news order by news_id desc limit 5";
+$search_category_limit_5="select * from category order by category_id desc limit 5";
 $search_sql_limit_8="select * from news order by news_id desc limit 8";
 $search_sql_all_news="select * from news order by news_id desc";
 $search_category="select * from category order by category_id desc";
