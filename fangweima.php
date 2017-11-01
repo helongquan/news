@@ -36,7 +36,7 @@ if (!is_login()) {
 				}
 				while ($row=mysql_fetch_array($result_set_13)) {
 			 ?>
-			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><?php echo $row['code']?></div>
+			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><span class="left"><?php echo $row['code']?></span><span class="right"><a href="fangweima_delete.php?fangweima_id=<?php echo $row['fangweima_id']?>"><i class="glyphicon glyphicon-trash"></i></a></span></div>
 			<?php
 			}
 			?>

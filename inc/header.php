@@ -51,6 +51,7 @@
 			<li><a href="fangweima.php"><i class="glyphicon glyphicon-barcode"></i> 防伪码</a></li>
 			<li><a href="shopping.php"><i class="glyphicon glyphicon-shopping-cart"></i> 商城中心</a></li>
 			<li><a href="contact.php"><i class="glyphicon glyphicon-earphone"></i> 联系我们</a></li>
+			<li><a href="research.php"><i class="glyphicon glyphicon-edit"></i> 问卷调查</a></li>
 	        <li><a href="login.php"><i class="glyphicon glyphicon-user"></i> 登录</a></li>
 			<li><a href="register.php"><i class="glyphicon glyphicon-list-alt"></i> 注册</a></li>
 			<li><a href="logout.php"><i class="glyphicon glyphicon-hourglass"></i> 退出</a></li>
@@ -76,6 +77,7 @@ $search_sql_limit_8="select * from news order by news_id desc limit 8";
 $search_sql_all_news="select * from news order by news_id desc";
 $search_category="select * from category order by category_id desc";
 $search_fangweima="select * from fangweima order by fangweima_id desc";
+$search_suggestion="select * from suggestion order by suggestion_id desc";
 $search_review="select * from review order by review_id desc";
 // 若进行模糊查询，取得模糊查询的关键字keyword
 $keyword="";

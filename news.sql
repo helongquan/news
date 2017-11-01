@@ -49,3 +49,9 @@ CREATE TABLE fangweima (
   fangweima_id int(11) NOT NULL AUTO_INCREMENT,
   code varchar(32) NOT NULL unique
 );
+DROP TABLE IF EXISTS `suggestion`;
+CREATE TABLE suggestion (
+  suggestion_id int(11) NOT NULL unique AUTO_INCREMENT,
+  suggestion_content text,
+  add_time datetime
+);
