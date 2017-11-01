@@ -16,7 +16,7 @@ include_once("inc/header.php");
 				}
 				while ($row=mysql_fetch_array($result_set_12)) {
 			 ?>
-			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><span class="left"><a href="category_detail.php?category_id=<?php echo $row['category_id']?>"><?php echo $row['name']?></a></span><span class="right"><a href="category_delete.php?category_id=<?php echo $row['category_id']?>"><i class="glyphicon glyphicon-trash"></i></a></span></div>
+			<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4"><span class="left"><a href="category_detail.php?category_id=<?php echo $row['category_id']?>"><?php echo $row['name']?></a></span><span class="alignright"><a href="category_delete.php?category_id=<?php echo $row['category_id']?>"><i class="glyphicon glyphicon-trash"></i></a></span></div>
 			<?php
 			}
 			?>
