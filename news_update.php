@@ -8,7 +8,7 @@ $sql="update news set category_id=$category_id,title='$title',content='$content'
 get_connection();
 mysql_query($sql);
 close_connection();
-$message="新闻信息修改成功";
+$message="<div class='container'>新闻信息修改成功</div>";
 header("Location:news_list.php?message=$message");
  ?>
 

@@ -49,12 +49,12 @@ include_once("inc/header.php");
 
 	<?php 
 	if (empty($_SESSION["products"])) {
-		echo "你暂时没有购买商品<br/>";
+		echo "<div class='container tips'>你暂时没有购买商品</div>";
 	}else{
-		echo "你所购买的商品有：<br/>";
+		echo "<div class='container'>你所购买的商品有：</div><br/>";
 		$products=$_SESSION["products"];
 		foreach ($products as $key => $value) {
-			echo "商品$value<a href='cancelproduct.php?product_id=$key'>取消购买</a><br/>";
+			echo "<div class='col-xs-6 col-sm-6 col-md-4 col-lg-4 padding_no'><p class='emeg'>商品$value<a href='cancelproduct.php?product_id=$key'><span class='right'><i class='glyphicon glyphicon-trash'></i></span></a></p></div>";
 		}
 	}
 	?>

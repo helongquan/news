@@ -11,29 +11,8 @@
 	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
 <body>
-	<!-- <div id="header">
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-			<div id="logo">
-				<img src="images/logo.png">
-			</div>
-		</div>
-		<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-			<div class="mainmenu" id="mainmenu">
-				<ul>
-					<li><a href="index.php">首頁</a></li>
-					<li><a href="#">關於我們</a></li>
-					<li><a href="login.php">登录</a></li>
-					<li><a href="register.php">注册</a></li>
-					<li><a href="logout.php">退出</a></li>
-					<li><a href="fangweima.php">防伪码</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="clear"></div>
-	</div> -->
-
 	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
+	  <div class="container-fluid container">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
@@ -50,6 +29,7 @@
 	        <li><a href="about.php"><i class="glyphicon glyphicon-book"></i> 關於我們</a></li>
 			<li><a href="fangweima.php"><i class="glyphicon glyphicon-barcode"></i> 防伪码</a></li>
 			<li><a href="shopping.php"><i class="glyphicon glyphicon-shopping-cart"></i> 商城中心</a></li>
+			<li><a href="news_list.php"><i class="glyphicon glyphicon-envelope"></i> 新闻中心</a></li>
 			<li><a href="contact.php"><i class="glyphicon glyphicon-earphone"></i> 联系我们</a></li>
 			<li><a href="research.php"><i class="glyphicon glyphicon-edit"></i> 问卷调查</a></li>
 	        <li><a href="login.php"><i class="glyphicon glyphicon-user"></i> 登录</a></li>
