@@ -14,6 +14,9 @@ h2, h3, h4, h5 {
     color: #fff;
     padding: 10px 10px;
 }
+a{
+	text-decoration: none !important;
+}
 .center{
 	text-align: center !important;
 }
@@ -104,8 +107,8 @@ height:200px;
 	margin:5px 0px;
 }
 .pinglun{
-	padding: 10px;
-	margin: 10px;
+	margin: 10px auto;
+	padding:0px 10px;
 }
 .clear{
 	clear: both !important;
@@ -222,12 +225,6 @@ textarea{
 .index_content{
 	display: none !important;
 }
-
-.news_les{
-	padding-right: 0px !important;
-	padding-left: 0px !important;
-}
-
 .btn-group-justified>.btn, .btn-group-justified>.btn-group {
     float: none;
     display: -webkit-box !important;
@@ -250,6 +247,15 @@ textarea{
 .container {
     padding-left: 15px !important;
     padding-right: 15px !important;
+}
+
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+.news_les{
+	padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
 }
@@ -369,11 +375,6 @@ textarea{
 .thumbnail .caption {
     padding: 0px !important;
 }
-
-.news_les{
-	padding-right: 5px;
-	padding-left: 5px;
-}
 .copyright{
     padding: 0px;
     margin-bottom: 0px !important;
@@ -388,4 +389,10 @@ textarea{
 }
 .media-heading a{
 	color: #fff !important;
+}
+.add_to_cart{
+	background: rgba(255, 255, 255, 0.7803921568627451);
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    display: inline-block;
 }

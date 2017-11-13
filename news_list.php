@@ -24,6 +24,8 @@ include_once("inc/header.php");
 				<a href="news_list.php" class="btn btn-primary"><i class="glyphicon glyphicon-envelope"></i> 新闻中心</a>
 				<a href="fangweima.php" class="btn btn-info"><i class="glyphicon glyphicon-barcode"></i> 添加防伪码</a>
 			</div>
+
+		<div class="row">
 	<!-- </div> -->
 		<?php
 			get_connection();
@@ -64,7 +66,7 @@ include_once("inc/header.php");
 		<?php
 	}
 		 ?>
-
+	</div>
 </div>
 
 <?php

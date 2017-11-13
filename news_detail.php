@@ -20,7 +20,7 @@ $count_news=mysql_numrows($result_news);
 // 取出结果集中的该新闻“已审核”的评论条数
 $count_review=mysql_num_rows($result_review);
 if ($count_news==0) {
-	echo "该新闻不存在或已被删除";
+	echo "<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>很抱歉!</strong> 该新闻不存在或者已经被删除了！</div>";
 	exit;
 }
 // 根据新闻信息中的user_id查询对应的用户信息
@@ -75,12 +75,12 @@ mysql_free_result($result_review);
 				}
 				echo $row;
 	}else{
-		echo "<div class='ssd'>该新闻暂无评论！</div><br/>";
+		echo "<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>快!</strong> 该新闻暂无评论。</div>";
 	}
 	 ?>
 	<br/>
 	<form action="review_save.php" method="post">
-		添加评论：<br/><textarea name="content" rows="5"></textarea><br/>
+		添加评论：<br/><textarea id="textarea12" name="content" id="inputEmail22" style='height:300px; max-height:400px; width:100%;'></textarea><br/>
 		<input type="hidden" name="news_id" value="<?php echo $news['news_id'];?>">
 		<input type="submit" name="评论">
 	</form>
