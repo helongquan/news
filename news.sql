@@ -47,7 +47,8 @@ constraint FK_review_news foreign key (news_id) references news(news_id)
 DROP TABLE IF EXISTS `fangweima`;
 CREATE TABLE fangweima (
   fangweima_id int(11) NOT NULL AUTO_INCREMENT,
-  code varchar(32) NOT NULL unique
+  code varchar(32) NOT NULL unique,
+  publish_time datetime
 );
 DROP TABLE IF EXISTS `suggestion`;
 CREATE TABLE suggestion (

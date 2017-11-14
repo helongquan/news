@@ -1,5 +1,15 @@
 <?php
 include_once("inc/header.php");
+include_once("functions/is_login.php");
+session_start();
+if (!is_login()) {
+	echo "<div class='container'>";
+	echo "<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>嘿!</strong> 请你登录系统后，再访问该页面！</div>";
+	echo "<a href='login.php' class='btn btn-primary'>登录</a>";
+	echo "</div>";
+	include_once("inc/footer.php");
+	return;
+}
  ?>
 
 <script type="text/javascript">
@@ -43,7 +53,7 @@ function checkContent(){
 					while ($row=mysql_fetch_array($result_set_14)) {
 				 ?>
 					  <li class="list-group-item">
-					    <span class="badge"><?php echo $row['add_time']?></span>
+					    <span class="badge"><?php echo $row['add_time']?><a href="research_delete.php?suggestion_id=<?php echo $row['suggestion_id']?>" class="right"><i class="glyphicon glyphicon-trash"></i></a></span>
 					    <?php echo $row['suggestion_content']?>
 					  </li>
 				<?php
