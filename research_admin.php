@@ -24,7 +24,7 @@ function checkContent(){
 </script>
 
 <div class="container">
-	<form action="add_research.php" name="suggestionform" method="post" onSubmit="return checkContent();">
+	<form action="add_research.php" name="suggestionform" method="post" onSubmit="return checkContent();" enctype="multipart/form-data">
 		<div class="form-group">
 			<p>制作该问卷调查表，目的为了能够让技术部门更好的为业务部门服务，我们进行了一次问题收集，大家在跟客户沟通过程中客户有很多要求我们没有解决的，现在都可以在这里留言，我们在完成采集后，将会对这些问题给出解决方案，尽最大努力帮助业务部把握每一个客户。请业务部同事给予配合，谢谢。</p>
 			<p style="color:red"><i class="glyphicon glyphicon-bullhorn"></i>： 由于系统存在一个小bug，填写完意见后，第一遍提交的时候提示：填写是空的。大家不用担心，直接再次点击提交即可。关于这个小bug，我们将会尽快修复。</p>
@@ -32,6 +32,12 @@ function checkContent(){
 			<div class="form-group">
 			    <textarea class="form-control ckeditor" required="required" id="suggestion_contents" type="text" name="suggestion_content" rows="8" value="<?php echo $suggestion_content?>" placeholder="留言内容"></textarea>
 			</div>
+		</div>
+		<div class="form-group">
+		    <label for="exampleInputFile">添加图片：</label>
+		    <input type="file" id="exampleInputFile" name="news_file">
+		    <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+		    <p class="help-block">在这里添加附件，支持的格式有jpg,png等.</p>
 		</div>
 		<input type="submit" name="" class="btn btn-primary" value="添加"/>
 	</form>
@@ -55,6 +61,7 @@ function checkContent(){
 					  <li class="list-group-item">
 					    <span class="badge"><?php echo $row['add_time']?><a href="research_delete.php?suggestion_id=<?php echo $row['suggestion_id']?>" class="right"><i class="glyphicon glyphicon-trash"></i></a></span>
 					    <?php echo $row['suggestion_content']?>
+					    <p class="research_img"><img src="uploads/<?php echo $row['attachment']?>"></p>
 					  </li>
 				<?php
 				}
@@ -66,4 +73,4 @@ function checkContent(){
 
 <?php
 include_once("inc/footer.php");
- ?>
+?>

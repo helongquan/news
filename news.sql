@@ -58,6 +58,7 @@ DROP TABLE IF EXISTS `suggestion`;
 CREATE TABLE suggestion (
   suggestion_id int(11) NOT NULL unique AUTO_INCREMENT,
   suggestion_content text,
+  attachment char(100),
   add_time datetime
 );
 create table productcategory(
