@@ -59,6 +59,7 @@ $search_category_limit_5="select * from category order by category_id desc limit
 $search_sql_limit_8="select * from news order by news_id desc limit 8";
 $search_sql_all_news="select * from news order by news_id desc";
 $search_category="select * from category order by category_id desc";
+$search_product_category="select * from productcategory order by productcategory_id desc";
 $search_fangweima="select * from fangweima order by fangweima_id desc";
 $search_suggestion="select * from suggestion order by suggestion_id desc";
 $search_review="select * from review order by review_id desc";

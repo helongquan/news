@@ -20,6 +20,10 @@ create table users(
 user_id int auto_increment primary key,
 name char(20) not NULL,
 password char(32) NOT NULL,
+address varchar(50),
+avatar varchar(255),
+telephone bigint,
+resume text,
 email varchar(50) NOT NULL unique
 );
 create table news(
@@ -55,4 +59,28 @@ CREATE TABLE suggestion (
   suggestion_id int(11) NOT NULL unique AUTO_INCREMENT,
   suggestion_content text,
   add_time datetime
+);
+create table productcategory(
+productcategory_id int auto_increment primary key,
+name char(20) NOT NULL unique
+);
+create table product(
+product_id int auto_increment primary key,
+user_id int,
+productcategory_id int,
+product_title char(100) not null,
+product_content text,
+product_price int,
+quantity int,
+color varchar(12),
+weight varchar(12),
+brand varchar(32),
+inch varchar(16),
+product_url varchar(255),
+publish_time datetime,
+unix_time text,
+clicked int,
+thumbnail varchar(255),
+constraint FK_product_user foreign key (user_id) references users(user_id),
+constraint FK_product_productcategory foreign key (productcategory_id) references productcategory(productcategory_id)
 );
