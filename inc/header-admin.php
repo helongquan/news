@@ -64,6 +64,9 @@ $search_product_category="select * from productcategory order by productcategory
 $search_fangweima="select * from fangweima order by fangweima_id desc";
 $search_suggestion="select * from suggestion order by suggestion_id desc";
 $search_review="select * from review order by review_id desc";
+$search_users_total="select * from users";
+$search_fangweima_total="select * from fangweima";
+$search_category_total="select * from category";
 // 若进行模糊查询，取得模糊查询的关键字keyword
 $keyword="";
 if (isset($_GET["keyword"])) {

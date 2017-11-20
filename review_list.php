@@ -25,7 +25,9 @@ get_connection();
 // $result_set=mysql_query($result_sql);
 // //新添加的，为了实现分页 结束
 
-
+?>
+<div class="container">
+<?php
 $result_set=mysql_query($sqls);
 close_connection();
 echo "<div class='review_title'><h2>系统所有评论信息如下：</h2></div>";
@@ -43,12 +45,16 @@ while ($row=mysql_fetch_array($result_set)) {
 	echo "<hr/></div>";
 }
  ?>
+
 <?php
 echo $row;
 
 $url=$_SERVER["PHP_SELF"];
 page($total_records,$page_size,$page_current,$url,$keyword);
  ?>
+
+</div>
+ 
 <?php 
 include_once("inc/footer.php");
  ?>

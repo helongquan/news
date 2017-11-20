@@ -238,11 +238,12 @@ textarea{
 	font-size: 12px !important;
 }
 .btn-group-justified>.btn, .btn-group-justified>.btn-group {
-    float: none;
     display: -webkit-box !important;
-    width: 100% !important;
+    width: 49% !important;
+    float: left;
+    margin-right: 1% !important;
+    margin-bottom: 8px;
     border-radius: 4px !important;
-    margin: 5px auto !important;
 }
 .container {
     padding-left: 15px !important;
