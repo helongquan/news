@@ -7,7 +7,7 @@ if (!is_login()) {
   echo "<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>嘿!</strong> 请你登录系统后，再访问该页面！</div>";
   echo "<a href='login.php' class='btn btn-primary'>登录</a>";
   echo "</div>";
-  include_once("inc/footer.php");
+  include_once("inc/footer-admin.php");
   return;
 }
  ?>
