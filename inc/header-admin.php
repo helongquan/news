@@ -8,14 +8,16 @@
 	<!-- 引入wangEditor编辑器，应用在test.php文件中，不需要的时候可以删除 开始 -->
 	<link rel="stylesheet" href="wangEditor-master/dist/css/wangEditor.css">
 	<!-- 引入wangEditor编辑器，应用在test.php文件中，不需要的时候可以删除 结束 -->
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="js/holder.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid container">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
@@ -28,19 +30,17 @@
 
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	      	<li><a href="index.php"><i class="glyphicon glyphicon-home"></i> 首頁</a></li>
-	        <li><a href="about.php"><i class="glyphicon glyphicon-book"></i> 關於我們</a></li>
-			<li><a href="fangweima.php"><i class="glyphicon glyphicon-barcode"></i> 防伪码</a></li>
-			<li><a href="shopping.php"><i class="glyphicon glyphicon-shopping-cart"></i> 商城中心</a></li>
+	      	<li><a href="index.php"><i class="glyphicon glyphicon-home"></i> 前台首页</a></li>
+			<li><a href="order.php"><i class="glyphicon glyphicon-shopping-cart"></i> 订单中心</a></li>
 			<li><a href="news_list.php"><i class="glyphicon glyphicon-envelope"></i> 新闻中心</a></li>
-			<li><a href="contact.php"><i class="glyphicon glyphicon-earphone"></i> 联系我们</a></li>
-			<li><a href="research.php"><i class="glyphicon glyphicon-edit"></i> 问卷调查</a></li>
-	        <li><a href="login.php"><i class="glyphicon glyphicon-user"></i> 登录</a></li>
+			<li><a href="wishlist.php"><i class="glyphicon glyphicon-heart"></i> 收藏中心</a></li>
 			<li><a href="register.php"><i class="glyphicon glyphicon-list-alt"></i> 注册</a></li>
-			<li><a href="logout.php"><i class="glyphicon glyphicon-hourglass"></i> 退出</a></li>
+			<form class="navbar-form navbar-right">
+	            <input type="text" class="form-control" placeholder="Search...">
+	        </form>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="user.php"><i class="glyphicon glyphicon-user"></i></a></li>
+	        <li><a href="logout.php"><i class="glyphicon glyphicon-hourglass"></i> 退出</a></li>
 	      </ul>
 	    </div>
 	  </div>

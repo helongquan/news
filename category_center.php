@@ -5,6 +5,7 @@ include_once("inc/header.php");
 
 <div id="category_list">
 	<div class="container">
+
 	<h2 class="page_title">新闻分类</h2>
 		<div class="category_list">
 			<?php
