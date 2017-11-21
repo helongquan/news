@@ -5,9 +5,13 @@ include_once("functions/is_login.php");
 
 if (isset($_GET["login_message"])) {
 	if ($_GET["login_message"]=="password_error") {
-		echo "密码错误，重新登录！<br/>";
+    echo "<div class='container'>";
+    echo "<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>嘿!</strong> 密码错误，重新登录！</div>";
+    echo "</div>";
 	}elseif ($_GET["login_message"]=="password_right") {
-			echo "登录成功！<br/>";
+		echo "<div class='container'>";
+    echo "<div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong>恭喜!</strong> 登录成功！</div>";
+    echo "</div>";
 		}
 }
 

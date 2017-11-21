@@ -24,6 +24,7 @@ address varchar(50),
 avatar varchar(255),
 telephone bigint,
 resume text,
+grade int(11),
 email varchar(50) NOT NULL unique
 );
 create table news(

@@ -42,6 +42,7 @@ if (isset($_GET["keyword"])) {
 				<a href="news_list.php" class="btn btn-primary"><i class="glyphicon glyphicon-envelope"></i> 新闻中心</a>
 				<a href="news_list.php" class="btn btn-danger"><i class="glyphicon glyphicon-shopping-cart"></i> 购物中心</a>
 				<a href="fangweima.php" class="btn btn-info"><i class="glyphicon glyphicon-barcode"></i> 添加防伪码</a>
+				<a href="rank.php" class="btn btn-primary"><i class="glyphicon glyphicon-list-alt"></i> 查排名</a>
 			</div>
 			<hr>
 				<?php
