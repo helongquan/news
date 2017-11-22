@@ -24,7 +24,7 @@ if (!is_login()) {
 	              <th>分数</th>
 	            </tr>
 	          </thead>
-	          <tbody>
+	          <tbody class="colorfoul">
 	            <?php
 	              get_connection();
 	              $result_set=mysql_query($search_users);
@@ -37,8 +37,15 @@ if (!is_login()) {
 	            <tr>
 	              <td><?php echo $rows['user_id']?></td>
 	              <td><?php echo $rows['name']?></td>
-	              <td><?php echo $rows['grade']?></td>
+				  <td>
+				  	<div class="progress">
+					  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="750" style="width:100%">
+					    <?php echo $rows['grade']?>
+					  </div>
+					</div>
+				  </td>
 	            </tr>
+
 	            <?php
 	            }
 	             ?>

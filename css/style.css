@@ -406,3 +406,21 @@ textarea{
 .research_img img{
 	width: 100% !important;
 }
+.colorfoul tr:nth-last-child(3n) .progress-bar{
+	background: #2C8EBB;
+}
+.colorfoul tr:nth-last-child(3n+1) .progress-bar{
+	background: #6F5499;
+}
+.colorfoul tr:nth-last-child(3n+2) .progress-bar{
+	background: #CF4646;
+}
+.search_colorfoul tr:nth-last-child(3n) .progress-bar{
+	background: #BF1813;
+}
+.search_colorfoul tr:nth-last-child(3n+1) .progress-bar{
+	background: #2D89EF;
+}
+.search_colorfoul tr:nth-last-child(3n+2) .progress-bar{
+	background: #4ECDC4;
+}

@@ -32,7 +32,7 @@ $count=mysql_num_rows($result_set);
 	echo "排在你前面的有以下这些人：";
 	?>
 	<div class="table-responsive">
-        <table class="table table-striped">
+        <table class="table table-hover">
           <thead>
             <tr>
               <th>学生编号</th>
@@ -40,7 +40,7 @@ $count=mysql_num_rows($result_set);
               <th>分数</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="search_colorfoul">
             <?php
               get_connection();
               $result_set=mysql_query($grade_sql);
@@ -53,7 +53,13 @@ $count=mysql_num_rows($result_set);
             <tr>
               <td><?php echo $rows['user_id']?></td>
               <td><?php echo $rows['name']?></td>
-              <td><?php echo $rows['grade']?></td>
+              <td>
+			  	<div class="progress">
+				  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="750" style="width:100%">
+				    <?php echo $rows['grade']?>
+				  </div>
+				</div>
+			  </td>
             </tr>
             <?php
             }
