@@ -10,7 +10,10 @@
 	<!-- 引入wangEditor编辑器，应用在test.php文件中，不需要的时候可以删除 结束 -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/jquery.lightbox_me.js"></script>
 	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 </head>
 <body>

@@ -1,71 +1,45 @@
 <?php
 	include_once("inc/header.php");
-	// include_once("functions/is_login.php");
-	// session_start();
-	// if (!is_login()) {
-	// 	echo "<div class='container'>";
-	// 	echo "请你登录系统后，再访问该页面！<br/>";
-	// 	echo "<a href='login.php' class='btn btn-primary'>登录</a>";
-	// 	echo "</div>";
-	// 	include_once("inc/footer.php");
-	// 	return;
-	// }
  ?>
+
+<style>
+/* 可以设置不同的进入和离开动画 */
+/* 设置持续时间和动画函数 */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+</style>
+
 <div class="container">
-	<form method="post" action="news_save.php" enctype="multipart/form-data" class="form-horizontal">
-		<div class="form-group">
-		    <label for="inputEmail3" class="col-sm-2 control-label">标题：</label>
-		    <div class="col-sm-10">
-		      <input type="text" class="form-control" name="title" id="inputEmail3" placeholder="标题">
-		    </div>
-		</div>
-
-		<div class="form-group">
-		    <label for="inputEmail22" class="col-sm-2 control-label">内容：</label>
-		    <div class="col-sm-10">
-		      <!-- <textarea name="content" id="inputEmail22" class="form-control ckeditor" rows="8"></textarea> -->
-		      <textarea id="textarea12" name="content" id="inputEmail22" style='height:200px; max-height:400px; width:100%;'></textarea>
-		    </div>
-		</div>
-
-		<div class="form-group">
-		    <label for="inputEmail22" class="col-sm-2 control-label">类别：</label>
-		    <div class="col-sm-10">
-			<select class="form-control" name="category_id" size="1">
-				<?php
-					include_once("functions/database.php");
-					get_connection();
-					$result_set=mysql_query("select * from category");
-					close_connection();
-					while ($row=mysql_fetch_array($result_set)) {
-					?>
-					<option value="<?php echo $row['category_id'];?>"><?php echo $row['name'];?></option>
-					<?php
-					}
-					?>
-			  </select>
-			</div>
-		</div>
-
-		<div class="form-group">
-		    <label for="exampleInputFile1" class="col-sm-2 control-label">附件：</label>
-		    <div class="col-sm-10">
-			    <input type="file" id="exampleInputFile1" name="news_file" size="50">
-			    <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
-			    <p class="help-block">在这里添加附件，支持的格式有doc,jpg,pdf,png等.</p>
-			</div>
-		</div>
-		<div class="form-group">
-		    <label for="exampleInputFile1" class="col-sm-2 control-label"></label>
-		    <div class="col-sm-10">
-			    <input type="submit" class="btn btn-primary" value="提交">
-			    <input type="reset" class="btn btn-default" value="清空">
-			</div>
-		</div>
-	</form>
+	<div id="example-1">
+	  <button @click="show = !show">
+	    Toggle render
+	  </button>
+	  <transition name="slide-fade">
+	    <p v-if="show">hello</p>
+	  </transition>
+	</div>
 </div>
 
 
-<?php
+
+
+<script>
+	new Vue({
+	  el: '#example-1',
+	  data: {
+	    show: true
+	  }
+	})
+</script>
+ <?php
 include_once("inc/footer.php");
  ?>
