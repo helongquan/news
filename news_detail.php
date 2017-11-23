@@ -46,7 +46,7 @@ mysql_free_result($result_review);
 	<div class="panel panel-primary">
 	  <!-- Default panel contents -->
 	  <div class="panel-heading"><?php echo $news['title']; ?></div>
-	  <p class="post_some"><span><i class="glyphicon glyphicon-user"></i> <?php echo $user['name']; ?></span>&nbsp;&nbsp;<span><i class="glyphicon glyphicon-th-list"></i> <?php echo $category['name']; ?></span>&nbsp;&nbsp;<span><i class="glyphicon glyphicon-time"></i> <?php echo $news['publish_time']; ?></span>&nbsp;&nbsp;<span><i class="glyphicon glyphicon-eye-open"></i> <?php echo $news['clicked']; ?></span>&nbsp;&nbsp;<span><a href="news_edit.php?news_id=<?php echo $row['news_id']?>">编辑 <i class="glyphicon glyphicon-pencil"></i></a></span></p>
+	  <p class="post_some"><span><i class="glyphicon glyphicon-user"></i> <?php echo $user['name']; ?></span>&nbsp;&nbsp;<span><i class="glyphicon glyphicon-th-list"></i> <?php echo $category['name']; ?></span>&nbsp;&nbsp;<span><i class="glyphicon glyphicon-time"></i> <?php echo $news['publish_time']; ?></span>&nbsp;&nbsp;<span><i class="glyphicon glyphicon-eye-open"></i> <?php echo $news['clicked']; ?></span></p>
 	  <div class="panel-body">
 	    <img src="uploads/<?php echo $news['attachment']?>">
 		<?php echo $news['content']; ?>

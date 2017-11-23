@@ -89,9 +89,9 @@
 		</div>
 
 		<div class="form-group">
-		    <label for="exampleInputFile1" class="col-sm-2 control-label">缩略图：</label>
+		    <label for="exampleInputFile1" class="col-sm-2 control-label">附件：</label>
 		    <div class="col-sm-10">
-			    <input type="file" id="exampleInputFile1" name="thumbnail" size="50">
+			    <input type="file" id="exampleInputFile1" name="news_file" size="50">
 			    <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
 			    <p class="help-block">在这里添加附件，支持的格式有doc,jpg,pdf,png等.</p>
 			</div>

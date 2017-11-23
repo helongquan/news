@@ -82,7 +82,7 @@ product_url varchar(255),
 publish_time datetime,
 unix_time text,
 clicked int,
-thumbnail varchar(255),
+attachment char(100),
 constraint FK_product_user foreign key (user_id) references users(user_id),
 constraint FK_product_productcategory foreign key (productcategory_id) references productcategory(productcategory_id)
 );

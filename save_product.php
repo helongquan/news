@@ -20,9 +20,9 @@ else{
 	$currentDate= date("Y-m-d H:i:s");
 	$unix_time=strtotime($currentDate);
 	$clicked=0;
-	$thumbnail=$_FILES["thumbnail"]["name"];
-	$message=upload($_FILES["thumbnail"],"uploads");
-	$sql="insert into product values(null,$product_id,$productcategory_id,'$product_title','$product_content','$product_price','$quantity',$color,'$weight','$brand','inch','currentDate','unix_time','$clicked','$thumbnail')";
+	$file_name=$_FILES["news_file"]["name"];
+	$message=upload($_FILES["news_file"],"uploads");
+	$sql="insert into product values(null,$product_id,$productcategory_id,'$product_title','$product_content','$product_price','$quantity',$color,'$weight','$brand','inch','currentDate','unix_time','$clicked','$file_name')";
 	if ($message=="文件上传成功！"||$message=="没有选择上传附件！") {
 		include_once("functions/database.php");
 		get_connection();
@@ -30,7 +30,7 @@ else{
 		close_connection();
 	}
 };
-echo "<script>alert('新闻发布成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+echo "<script>alert('产品发布成功!');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
 header("location:shopping.php");
  ?>
 
