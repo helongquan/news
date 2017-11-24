@@ -24,16 +24,88 @@ if (isset($_GET["keyword"])) {
  
 	<div id="news_list">
 		<div class="content container">
+
 			<form method="get" action="news_list.php">
-				  <div class="col-lg-12 nopadding">
-				    <div class="input-group">
-				      <input type="text" class="form-control" name="keyword" placeholder="请输入关键词" value="<?php echo $keyword;?>">
-				      <span class="input-group-btn">
-				        <button class="btn btn-primary"  type="submit">搜索</button>
-				      </span>
-				    </div>
-				  </div>
+			  <div class="col-lg-12 nopadding">
+			    <div class="input-group">
+			      <input type="text" class="form-control" name="keyword" placeholder="请输入关键词" value="<?php echo $keyword;?>">
+			      <span class="input-group-btn">
+			        <button class="btn btn-primary"  type="submit">搜索</button>
+			      </span>
+			    </div>
+			  </div>
 			</form>
+
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		      <!-- Indicators -->
+		      <ol class="carousel-indicators">
+		        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		        <li data-target="#myCarousel" data-slide-to="1"></li>
+		        <li data-target="#myCarousel" data-slide-to="2"></li>
+		      </ol>
+		      <div class="carousel-inner" role="listbox">
+		        <div class="item active">
+		          <img class="first-slide" src="http://nocti.spartanya.com/wp-content/uploads/2017/06/a.jpg" alt="">
+		          <div class="container">
+		            <div class="carousel-caption">
+		              <h3>鸢尾花序</h3>
+		              <p>鸢尾花序商城新开业，产品5折优惠，限时折扣，先到先得.</p>
+		              <p class="mobile_hidden"><a class="btn btn-info" href="shopping.php" role="button">立即查看</a></p>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="item">
+		          <img class="second-slide" src="http://nocti.spartanya.com/wp-content/uploads/2017/06/b.jpg" alt="Second slide">
+		          <div class="container">
+		            <div class="carousel-caption">
+		              <h3>新闻中心</h3>
+		              <p>发布新闻内容，爆料有奖，爆料送积分，积分可提现.</p>
+		              <p class="mobile_hidden"><a class="btn btn-info" href="news_list.php" role="button">立即查看</a></p>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="item">
+		          <img class="third-slide" src="http://nocti.spartanya.com/wp-content/uploads/2017/06/c.jpg" alt="Third slide">
+		          <div class="container">
+		            <div class="carousel-caption">
+		              <h3>服务中心</h3>
+		              <p>我们推出了一系列的服务，正在不断的更新服务内容.</p>
+		              <p class="mobile_hidden"><a class="btn btn-info" href="user.php" role="button">立即查看</a></p>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		        <span class="sr-only">上一个</span>
+		      </a>
+		      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		        <span class="sr-only">下一个</span>
+		      </a>
+		    </div>
+
+			<div class="row index_servic">
+		        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		          <p><i class="glyphicon glyphicon-shopping-cart"></i></p>
+		          <h3>商城中心</h3>
+		          <p class="mobile_hidden">鸢尾花序商城新开业，产品均5折优惠，限时折扣.</p>
+		          <p><a class="btn btn-primary" href="shopping.php" role="button">了解详情 &raquo;</a></p>
+		        </div>
+		        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 borddr">
+		          <p><i class="glyphicon glyphicon-list-alt"></i></p>
+		          <h3>新闻中心</h3>
+		          <p class="mobile_hidden">发布新闻内容，爆料有奖，爆料送积分，积分提现.</p>
+		          <p><a class="btn btn-primary" href="news_list.php" role="button">了解详情 &raquo;</a></p>
+		        </div>
+		        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		          <p><i class="glyphicon glyphicon-headphones"></i></p>
+		          <h3>服务中心</h3>
+		          <p class="mobile_hidden">我们推出了一系列服务，正在不断的更新服务内容.</p>
+		          <p><a class="btn btn-primary" href="user.php" role="button">了解详情 &raquo;</a></p>
+		        </div>
+		      </div>
+
 			<div class="btn-group btn-group-justified" role="group" aria-label="..." id="btn-group-justified">
 			    <a href="news_add.php" class="btn btn-success"><i class="glyphicon glyphicon-paperclip"></i> 添加新闻</a>
 				<a href="add_category.php" class="btn btn-primary"><i class="glyphicon glyphicon-th-list"></i> 添加分类</a>

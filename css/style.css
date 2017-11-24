@@ -7,7 +7,7 @@ p,span,a{
 	font-size: 1.6rem;
 	line-height: 1.8rem;
 }
-h2, h3, h4, h5 {
+h2,.media-heading {
     font-size: 18px;
     margin: 0px 0px;
     background: #69ace6;
@@ -83,7 +83,6 @@ hr {
 }
 #news_list{
 	margin: 10px 0px;
-	padding:10px;
 }
 #news_list table tr td{
 	padding: 10px;
@@ -266,6 +265,23 @@ textarea{
 	margin-left: -10px !important;
     margin-right: -10px !important;
 }
+.index_servic h3{
+	font-size: 18px !important;
+}
+.mobile_hidden{
+	display: none !important;
+}
+.carousel {
+    margin-top: 20px !important;
+}
+.index_servic {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+.borddr{
+	border-left: 0px solid #dedede !important;
+	border-right: 0px solid #dedede !important;
+}
 
 }
 
@@ -348,7 +364,8 @@ textarea{
 .panel-body img{
 	margin: 10px auto;
 	display: block;
-	width: 100%;
+	max-width: 600px;
+    width: 100%;
     box-shadow: 0px 1px 15px 0px #aaa;
 }
 .panel-body p{
@@ -427,4 +444,64 @@ textarea{
 }
 .search_colorfoul tr:nth-last-child(3n+2) .progress-bar{
 	background: #4ECDC4;
+}
+
+.index_servic{
+margin-bottom: 20px;
+}
+.index_servic h3,.index_servic p{
+	text-align: center;
+}
+.carousel-inner > .item > img {
+    position: relative !important;
+    width: 100% !important;
+    max-height: 500px;
+    height: 100%;
+}
+.carousel .item {
+    height: 100% !important;
+    border-radius: 5px;
+}
+.carousel {
+    height: 100% !important;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.index_servic i{
+    border-radius: 50%;
+    padding: 1em;
+    font-size: 24px;
+    text-align: center !important;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.index_servic i.glyphicon-shopping-cart{
+	color: #df344b;
+    background: rgba(244, 67, 54, 0.2);
+}
+.index_servic i.glyphicon-list-alt{
+    color:#4CAF50;
+    background: rgba(76, 175, 80, 0.2);
+}
+.index_servic i.glyphicon-headphones{
+    color:#2C8EBB;
+    background: rgba(44, 142, 187, 0.2);
+}
+
+
+.index_servic p{
+	font-size: 13px !important;
+    line-height: initial;
+}
+.carousel .item .container {
+     margin: 0px auto !important; 
+}
+.carousel-caption {
+    position: absolute;
+    bottom: 8px !important;
+}
+.borddr{
+	border-left: 1px solid #dedede;
+	border-right: 1px solid #dedede;
 }

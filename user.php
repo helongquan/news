@@ -69,7 +69,7 @@ if (!is_login()) {
         <li><a href="#products">我的产品</a></li>
         <li><a href="#fangweima">防伪码管理</a></li>
         <li><a href="#wenzhangfenlei">文章分类</li>
-        <li><a href="#wenzhangfenlei" id="btnPrint" onclick="javascript:window.print();">打印内容</li>
+        <li><a href="#" id="btnPrint" onclick="javascript:window.print();">打印内容</li>
       </ul>
     </div>
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

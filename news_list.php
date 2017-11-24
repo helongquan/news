@@ -57,7 +57,7 @@ include_once("inc/header.php");
 			    <div class="thumbnail">
 			      <img src="uploads/<?php echo $row['attachment']?>">
 			      <div class="caption">
-			        <h3><a href="news_detail.php?news_id=<?php echo $row['news_id']?>"><?php echo $row['title']?></a></h3>
+			        <h3 class="media-heading"><a href="news_detail.php?news_id=<?php echo $row['news_id']?>"><?php echo $row['title']?></a></h3>
 			        <p><a href="news_edit.php?news_id=<?php echo $row['news_id']?>" class="btn btn-primary" role="button">编辑 <i class="glyphicon glyphicon-pencil"></i></a> <a href="news_delete.php?news_id=<?php echo $row['news_id']?>" class="btn btn-default" role="button">删除 <i class="glyphicon glyphicon-trash"></i></a></p>
 			      </div>
 			    </div>
