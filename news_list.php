@@ -16,14 +16,16 @@ include_once("inc/header.php");
 			  </div>
 		</form>
 
-		<div class="btn-group btn-group-justified" role="group" aria-label="..." id="btn-group-justified">
-		    <a href="news_add.php" class="btn btn-success"><i class="glyphicon glyphicon-paperclip"></i> 添加新闻</a>
-			<a href="add_category.php" class="btn btn-primary"><i class="glyphicon glyphicon-th-list"></i> 添加分类</a>
-			<a href="category_center.php" class="btn btn-info"><i class="glyphicon glyphicon-th"></i> 分类中心</a>
-			<a href="review_list.php" class="btn btn-warning"><i class="glyphicon glyphicon-comment"></i> 评论中心</a>
-			<a href="news_list.php" class="btn btn-primary"><i class="glyphicon glyphicon-envelope"></i> 新闻中心</a>
-			<a href="fangweima.php" class="btn btn-info"><i class="glyphicon glyphicon-barcode"></i> 添加防伪码</a>
-		</div>
+		<ul class="irbox">
+			<li><a href="news_add.php" class="btn btn-success"><i class="glyphicon glyphicon-paperclip"></i> 添加新闻</a></li>
+			<li><a href="add_category.php" class="btn btn-primary"><i class="glyphicon glyphicon-th-list"></i> 添加分类</a></li>
+			<li><a href="category_center.php" class="btn btn-info"><i class="glyphicon glyphicon-th"></i> 分类中心</a></li>
+			<li><a href="review_list.php" class="btn btn-warning"><i class="glyphicon glyphicon-comment"></i> 评论中心</a></li>
+			<li><a href="news_list.php" class="btn btn-primary"><i class="glyphicon glyphicon-envelope"></i> 新闻中心</a></li>
+			<li><a href="news_list.php" class="btn btn-danger"><i class="glyphicon glyphicon-shopping-cart"></i> 购物中心</a></li>
+			<li><a href="jisuanqi.php" class="btn btn-info"><i class="glyphicon glyphicon-erase"></i> 计算器</a></li>
+			<li><a href="rank.php" class="btn btn-primary"><i class="glyphicon glyphicon-list-alt"></i> 查排名</a></li>
+		</ul>
 
 		<div class="row">
 	<!-- </div> -->

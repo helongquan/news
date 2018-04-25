@@ -16,11 +16,11 @@ include_once("inc/header.php");
 		  </div>
 	</form>
 
-	<div class="btn-group btn-group-justified" role="group" aria-label="..." id="btn-group-justified">
-	    <a href="add_product.php" class="btn btn-success"><i class="glyphicon glyphicon-paperclip"></i> 添加产品</a>
-		<a href="add_product_category.php" class="btn btn-primary"><i class="glyphicon glyphicon-th-list"></i> 添加产品分类</a>
-		<a href="product_category.php" class="btn btn-info"><i class="glyphicon glyphicon-th"></i> 产品分类中心</a>
-	</div>
+	<ul class="irbox">
+	    <li><a href="add_product.php" class="btn btn-success"><i class="glyphicon glyphicon-paperclip"></i> 添加产品</a></li>
+		<li><a href="add_product_category.php" class="btn btn-primary"><i class="glyphicon glyphicon-th-list"></i> 添加产品分类</a></li>
+		<li><a href="product_category.php" class="btn btn-info"><i class="glyphicon glyphicon-th"></i> 产品分类中心</a></li>
+	</ul>
 
 	<div class="form-group">
 		<h2 class="page_title">产品分类添加页面</h2>

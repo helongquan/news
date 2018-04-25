@@ -31,6 +31,7 @@ $count=mysql_num_rows($result_set);
 		  </div>";
 	echo "排在你前面的有以下这些人：";
 	?>
+
 	<div class="table-responsive">
         <table class="table table-hover">
           <thead>

@@ -16,14 +16,13 @@ include_once("inc/header.php");
 		  </div>
 	</form>
 
-	<div class="btn-group btn-group-justified" role="group" aria-label="..." id="btn-group-justified">
-	    <a href="add_product.php" class="btn btn-success"><i class="glyphicon glyphicon-paperclip"></i> 添加产品</a>
-		<a href="add_product_category.php" class="btn btn-primary"><i class="glyphicon glyphicon-th-list"></i> 添加产品分类</a>
-		<a href="product_category.php" class="btn btn-info"><i class="glyphicon glyphicon-th"></i> 产品分类中心</a>
-		<a href="cart.php" class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i> 购物车</a>
-		<a href="checkout.php" class="btn btn-success"><i class="glyphicon glyphicon-yen"></i> 结算</a>
-	</div>
-
+	<ul class="irbox">
+	    <li><a href="add_product.php" class="btn btn-success"><i class="glyphicon glyphicon-paperclip"></i> 添加产品</a></li>
+		<li><a href="add_product_category.php" class="btn btn-primary"><i class="glyphicon glyphicon-th-list"></i> 添加产品分类</a></li>
+		<li><a href="product_category.php" class="btn btn-info"><i class="glyphicon glyphicon-th"></i> 产品分类中心</a></li>
+		<li><a href="cart.php" class="btn btn-warning"><i class="glyphicon glyphicon-shopping-cart"></i> 购物车</a></li>
+		<li><a href="checkout.php" class="btn btn-success"><i class="glyphicon glyphicon-yen"></i> 结算</a></li>
+	</ul>
 
 	<div class="row" id="shopping_list">
 		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">

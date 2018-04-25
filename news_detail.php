@@ -80,7 +80,7 @@ mysql_free_result($result_review);
 	 ?>
 	<br/>
 	<form action="review_save.php" method="post">
-		添加评论：<br/><textarea id="textarea12" name="content" id="inputEmail22" style='height:300px; max-height:400px; width:100%;'></textarea><br/>
+		添加评论：<br/><textarea id="textarea12" name="content" id="inputEmail22" style='min-height:400px;width:100%'></textarea><br/>
 		<input type="hidden" name="news_id" value="<?php echo $news['news_id'];?>">
 		<input type="submit" name="评论">
 	</form>

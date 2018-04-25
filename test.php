@@ -59,6 +59,52 @@
 
 
 
+
+
+
+
+<div id="example">
+  <my-component></my-component>
+  <your-component></your-component>
+  <your-component></your-component>
+  <her-component></her-component>
+</div>
+
+<script>
+	// 注册
+	Vue.component('my-component', {
+	  template: '<div>A custom component!</div>'
+	});
+	Vue.component('your-component', {
+	  template: '<div>你敢说这个是你的组件？</div>'
+	});
+
+	// 创建根实例
+	new Vue({
+	  el: '#example'
+	});
+
+
+	var Child = {
+	  template: '<div>这个是子组件</div>'
+	};
+	var Second = {
+	  template: '<div>这个是第二个子组件</div>'
+	};
+
+	new Vue({
+	  // ...
+	  components: {
+	    // <my-component> 将只在父组件模板中可用
+	    'my-component': Child,
+	    'her-component': Second,
+	  }
+	})
+
+</script>
+
+
+
 <script>
 	new Vue({
 	  el: '#example-1',

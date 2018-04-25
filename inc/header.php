@@ -17,6 +17,7 @@
 	<script type="text/javascript" src="js/holder.min.js"></script>
 	<script type="text/javascript" src="js/jquery.lightbox_me.js"></script>
 	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
 	<script type="text/javascript">
 		// 解决引入多个jquery版本造成冲突的问题
         var jQuery_3_2_1 = $.noConflict(true);
@@ -43,10 +44,18 @@
 			<li><a href="shopping.php"><i class="glyphicon glyphicon-shopping-cart"></i> 商城中心</a></li>
 			<li><a href="news_list.php"><i class="glyphicon glyphicon-envelope"></i> 新闻中心</a></li>
 			<li><a href="contact.php"><i class="glyphicon glyphicon-earphone"></i> 联系我们</a></li>
-			<li><a href="research.php"><i class="glyphicon glyphicon-edit"></i> 问卷调查</a></li>
 	        <li><a href="login.php"><i class="glyphicon glyphicon-user"></i> 登录</a></li>
-			<li><a href="register.php"><i class="glyphicon glyphicon-list-alt"></i> 注册</a></li>
 			<li><a href="logout.php"><i class="glyphicon glyphicon-hourglass"></i> 退出</a></li>
+		      <div class="btn-group" role="group">
+			    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			      问卷调查中心
+			      <span class="caret"></span>
+			    </button>
+			    <ul class="dropdown-menu">
+			      <li><a href="research-default.php"><i class="glyphicon glyphicon-edit"></i> 问卷调查简约版</a></li>
+			      <li><a href="research.php"><i class="glyphicon glyphicon-edit"></i> 问卷调查完整版</a></li>
+			    </ul>
+			  </div>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="user.php"><i class="glyphicon glyphicon-user"></i></a></li>
@@ -72,6 +81,7 @@ $search_category="select * from category order by category_id desc";
 $search_product_category="select * from productcategory order by productcategory_id desc";
 $search_fangweima="select * from fangweima order by fangweima_id desc";
 $search_suggestion="select * from suggestion order by suggestion_id desc";
+$search_suggestion_noimg="select * from suggestion_noimg order by suggestion_noimg_id desc";
 $search_review="select * from review order by review_id desc";
 $search_users="select * from users order by user_id desc";
 // 若进行模糊查询，取得模糊查询的关键字keyword

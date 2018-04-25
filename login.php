@@ -65,7 +65,7 @@ if (isset($_COOKIE["password"])) {
         <input type="checkbox" name="expire" value="3600" checked="checked"> Cookie保存1小时
       </label>
     </div>
-    <input type="submit" name="" class="btn btn-default" value="登录"/>
+    <input type="submit" name="" class="btn btn-info" value="登录"/>&nbsp;&nbsp;&nbsp;<a href="register.php" class="btn btn-default">注册</a>
   </form>
 </div>
 
