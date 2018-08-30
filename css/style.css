@@ -238,14 +238,7 @@ textarea{
 .media-object {
     max-width: 180px !important;
 }
-.index_content{
-  /*white-space: nowrap;
-  overflow: hidden;
-  max-width: 300px;
-  padding-right: 20px;
-  text-overflow: ellipsis;
-  display: -webkit-inline-box;*/
-}
+
 .news_lis{
 	margin: 30px auto;
 }
