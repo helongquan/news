@@ -18,10 +18,7 @@
 	<script type="text/javascript" src="js/jquery.lightbox_me.js"></script>
 	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
-	<script type="text/javascript">
-		// 解决引入多个jquery版本造成冲突的问题
-        var jQuery_3_2_1 = $.noConflict(true);
-    </script>
+	<script type="text/javascript" src="js/custom.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">

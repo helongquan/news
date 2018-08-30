@@ -8,7 +8,7 @@ include_once("inc/header.php");
 			<p>制作该问卷调查表，目的为了能够让技术部门更好的为业务部门服务，我们进行了一次问题收集，大家在跟客户沟通过程中客户有很多要求我们没有解决的，现在都可以在这里留言，我们在完成采集后，将会对这些问题给出解决方案，尽最大努力帮助业务部把握每一个客户。请业务部同事给予配合，谢谢。</p>
 			<label>请在以下表格留言 <i class="glyphicon glyphicon-pencil"></i></label>
 			<div class="form-group">
-			    <textarea class="form-control ckeditor" required="required" id="suggestion_noimg_contents" type="text" name="suggestion_noimg_content" rows="8" value="<?php echo $suggestion_noimg_content?>" placeholder="留言内容"></textarea>
+			    <textarea class="form-control ckeditor" required="required" id="suggestion_noimg_contents" type="text" name="suggestion_noimg_content" rows="8" value="<?php echo $suggestion_noimg_content?>" placeholder="留言内容" required></textarea>
 			</div>
 		</div>
 		<input type="submit" name="" class="btn btn-primary" value="添加"/>

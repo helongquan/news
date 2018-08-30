@@ -61,7 +61,11 @@ function checkContent(){
 					  <li class="list-group-item">
 					    <span class="badge"><?php echo $row['add_time']?><a href="research_delete.php?suggestion_id=<?php echo $row['suggestion_id']?>" class="right"><i class="glyphicon glyphicon-trash"></i></a></span>
 					    <?php echo $row['suggestion_content']?>
-					    <p class="research_img"><img src="uploads/<?php echo $row['attachment']?>"></p>
+					    <?php if ($row['attachment'] != null): ?>
+						    <p class="research_img">
+						    	<img src="uploads/<?php echo $row['attachment']?>">
+						    </p>
+					    <?php endif ?>
 					  </li>
 				<?php
 				}

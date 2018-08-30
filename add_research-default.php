@@ -3,6 +3,10 @@ include_once("inc/header.php");
 include_once("functions/file_system.php");
 $suggestion_noimg_content=$_POST["suggestion_noimg_content"];
 $currentDate= date("Y-m-d H:i:s");
+if ($suggestion_noimg_content == null) {
+	echo "<script>alert('内容不能为空');location.href='".$_SERVER["HTTP_REFERER"]."';</script>";
+	exit;
+}
 $sql="insert into suggestion_noimg values(null,'$suggestion_noimg_content','$currentDate')";
 include_once("functions/database.php");
 get_connection();

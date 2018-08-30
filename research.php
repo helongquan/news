@@ -2,7 +2,7 @@
 include_once("inc/header.php");
  ?>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 function checkContent(){
     var sMobile = document.suggestionform.suggestion_content.value;
     if(sMobile.replace(/(s*$)|[^\u4e00-\u9fa5]/g, "").length ==0){
@@ -11,7 +11,7 @@ function checkContent(){
         return false;
     }
 }
-</script>
+</script> -->
 
 <div class="container">
 	<form action="add_research.php" name="suggestionform" method="post" onSubmit="return checkContent();" enctype="multipart/form-data">
@@ -51,7 +51,11 @@ function checkContent(){
 					  <li class="list-group-item">
 					    <span class="badge"><?php echo $row['add_time']?></span>
 					    <?php echo $row['suggestion_content']?>
-					    <p class="research_img"><img src="uploads/<?php echo $row['attachment']?>"></p>
+					    <?php if ($row['attachment'] != null): ?>
+						    <p class="research_img">
+						    	<img src="uploads/<?php echo $row['attachment']?>">
+						    </p>
+					    <?php endif ?>
 					  </li>
 				<?php
 				}

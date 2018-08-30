@@ -54,9 +54,6 @@ if (!is_login()) {
 	      </div>
 
 
-
-
-
 	</div>
 </div>
 
@@ -66,7 +63,7 @@ if (!is_login()) {
 		<div class="form-group">
 			<h2 class="page_title">分数排名查询</h2>
 			<label>输入分数</label>
-			<input type="text" class="form-control" name="grade" value="<?php echo $grade?>" placeholder="输入分数" required="required">
+			<input type="text" class="form-control" name="grade" value="<?php echo $grade?>" placeholder="输入分数" required="required" onkeyup="this.value=this.value.replace(/[^\d]/g,'') " onafterpaste="this.value=this.value.replace(/[^\d]/g,'') ">
 			<input type="hidden" class="form-control" name="publish_time" value="">
 		</div>
 		<input type="submit" name="" class="btn btn-primary" value="立即查询"/>
