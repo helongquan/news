@@ -116,6 +116,7 @@ if (isset($_GET["keyword"])) {
 				<li><a href="jisuanqi.php" class="btn btn-info"><i class="glyphicon glyphicon-erase"></i> 计算器</a></li>
 				<li><a href="rank.php" class="btn btn-primary"><i class="glyphicon glyphicon-list-alt"></i> 查排名</a></li>
 			</ul>
+			<div class="post_lists">
 				<?php
 					get_connection();
 					$page_size=1;
@@ -149,16 +150,34 @@ if (isset($_GET["keyword"])) {
 				    <h4 class="media-heading"><a href="news_detail.php?news_id=<?php echo $row['news_id']?>"><?php echo $row['title']?></a></h4>
 				    <div class="index_content">
 				    	<p><?php echo $row['content']; ?></p>
-				    	<p><a href="news_edit.php?news_id=<?php echo $row['news_id']?>">编辑</a>&nbsp;&nbsp;<a href="news_delete.php?news_id=<?php echo $row['news_id']?>">删除</a></p>
 				    </div>
+				    <p class="exte">
+				    	<a href="news_detail.php?news_id=<?php echo $row['news_id']?>">阅读全文</a>
+				    	<a href="news_edit.php?news_id=<?php echo $row['news_id']?>">编辑</a>
+				    	<a href="news_delete.php?news_id=<?php echo $row['news_id']?>">删除</a>
+				    </p>
 				  </div>
 				</div>
 				<?php
 			}
 				 ?>
+			</div>
 			<a href="news_list.php" class="more">阅读更多</a>
 		</div>
 	</div>
+
+<script>
+    $(function($){
+        $(".index_content").each(function(){
+            // 选择class为postTitle下的h2标签，控制显示的长度是40个字符
+            var maxwidth=120;
+            if($(this).text().length>maxwidth){
+                $(this).text($(this).text().substring(0,maxwidth));
+                $(this).html($(this).html()+'…');
+            }
+        });
+    });
+</script>
 
 <?php
 include_once("inc/footer.php");
