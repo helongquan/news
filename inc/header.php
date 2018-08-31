@@ -5,9 +5,6 @@
 	<title>鸢尾花序</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<!-- 引入wangEditor编辑器，应用在test.php文件中，不需要的时候可以删除 开始 -->
-	<link rel="stylesheet" href="wangEditor-master/dist/css/wangEditor.css">
-	<!-- 引入wangEditor编辑器，应用在test.php文件中，不需要的时候可以删除 结束 -->
 	<link rel="stylesheet" type="text/css" href="css/carousel.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/jquery.js"></script>
@@ -17,7 +14,8 @@
 	<script type="text/javascript" src="js/holder.min.js"></script>
 	<script type="text/javascript" src="js/jquery.lightbox_me.js"></script>
 	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script> -->
+	<script src="js/velocity.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
 </head>
 <body>
