@@ -10,12 +10,12 @@ if (isset($_GET["message"])) {
 // $search_sql="select * from news order by news_id desc";
 // $search_category="select * from category order by category_id desc";
 // 若进行模糊查询，取得模糊查询的关键字keyword
-$keyword="";
-if (isset($_GET["keyword"])) {
-	$keyword=$_GET["keyword"];
-	// 构造模糊查询的SQL语句
-	$search_sql="select * from news where title like '%$keyword%' or content like '%$keyword%' order by news_id desc";
-}
+// $keyword="";
+// if (isset($_GET["keyword"])) {
+// 	$keyword=$_GET["keyword"];
+// 	// 构造模糊查询的SQL语句
+// 	$search_sql="select * from news where title like '%$keyword%' or content like '%$keyword%' order by news_id desc";
+// }
 ?>
 
 <?php
@@ -30,7 +30,7 @@ if (isset($_GET["keyword"])) {
 			    <div class="input-group">
 			      <input type="text" class="form-control" name="keyword" placeholder="请输入关键词" value="<?php echo $keyword;?>">
 			      <span class="input-group-btn">
-			        <button class="btn btn-primary"  type="submit">搜索</button>
+			        <button class="btn btn-primary" type="submit">搜索</button>
 			      </span>
 			    </div>
 			  </div>
@@ -104,7 +104,7 @@ if (isset($_GET["keyword"])) {
 		          <p class="mobile_hidden">我们推出了一系列服务，正在不断的更新服务内容.</p>
 		          <p><a class="btn btn-primary" href="user.php" role="button">了解详情 &raquo;</a></p>
 		        </div>
-		      </div>
+		    </div>
 
 			<ul class="irbox">
 				<li><a href="news_add.php" class="btn btn-success"><i class="glyphicon glyphicon-paperclip"></i> 添加新闻</a></li>
@@ -143,7 +143,7 @@ if (isset($_GET["keyword"])) {
 				<div class="news_lis">
 				 <div class="media-left">
 				    <a href="news_detail.php?news_id=<?php echo $row['news_id']?>">
-				      <img class="media-object" src="uploads/<?php echo $row['attachment']?>" alt="<?php echo $row['news_id']?>">
+				      <img class="media-object" src="images/loading.gif" data-src="uploads/<?php echo $row['attachment']?>" alt="<?php echo $row['news_id']?>">
 				    </a>
 				  </div>
 				  <div class="media-body">

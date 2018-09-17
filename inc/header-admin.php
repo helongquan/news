@@ -4,16 +4,13 @@
 	<meta charset="UTF-8">
 	<title>鸢尾花序</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<!-- 引入wangEditor编辑器，应用在test.php文件中，不需要的时候可以删除 开始 -->
-	<link rel="stylesheet" href="wangEditor-master/dist/css/wangEditor.css">
-	<!-- 引入wangEditor编辑器，应用在test.php文件中，不需要的时候可以删除 结束 -->
-	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-	<script type="text/javascript" src="js/holder.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="./js/holder.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script> -->
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -49,7 +46,7 @@
 
 
 <?php
-include_once("functions/database.php");
+include_once("/functions/database.php");
 if (isset($_GET["message"])) {
 	echo $_GET["message"]."<br/>";
 }

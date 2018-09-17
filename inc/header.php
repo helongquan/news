@@ -14,7 +14,6 @@
 	<script type="text/javascript" src="js/holder.min.js"></script>
 	<script type="text/javascript" src="js/jquery.lightbox_me.js"></script>
 	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script> -->
 	<script src="js/velocity.min.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
 </head>
