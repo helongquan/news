@@ -10,20 +10,16 @@ if (!is_login()) {
   include_once("inc/footer-admin.php");
   return;
 }
- ?>
 
-
-<?php
-  get_connection();
-  $search_users_total_result=mysql_query($search_users_total);
-  $search_news_total_result=mysql_query($search_sql);
-  $search_review_total=mysql_query($search_review);
-  $search_fangweima_total_result=mysql_query($search_fangweima_total);
-  $search_category_total_result=mysql_query($search_category_total);
-  // $search_users_total_result=mysql_num_rows($search_users_total);
-  close_connection();
+get_connection();
+$search_users_total_result=mysql_query($search_users_total);
+$search_news_total_result=mysql_query($search_sql);
+$search_review_total=mysql_query($search_review);
+$search_fangweima_total_result=mysql_query($search_fangweima_total);
+$search_category_total_result=mysql_query($search_category_total);
+$search_users_total_result=mysql_num_rows($search_users_total);
+close_connection();
 ?>
-
 <script>
   // 打印控制代码 开始
   function preview(oper) {

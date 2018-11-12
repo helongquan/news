@@ -46,7 +46,7 @@
 
 
 <?php
-include_once("/functions/database.php");
+include_once("./functions/database.php");
 if (isset($_GET["message"])) {
 	echo $_GET["message"]."<br/>";
 }
